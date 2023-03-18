@@ -35,7 +35,7 @@ for(i in 1:dim(sites)[1]){
                              'ActivityStartDate' ))
   
   char <- c("pH", "Dissolved oxygen (DO)", "Temperature", 
-            "Conductivity", "Salinity")
+            "Conductivity", "Salinity", "Chlorophyll", "Phycocyanin (probe)")
   for(i in 1:length(char)){
     p <- char[i]
     d <- sdata_mdep[sdata_mdep$CharacteristicName == p,c("ResultMeasureValue",
