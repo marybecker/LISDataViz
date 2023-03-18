@@ -1,0 +1,128 @@
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+    font-family: 'Public Sans', sans-serif;
+}
+
+a {
+    color: #00AAE7;
+  }
+  
+a :hover {
+    background-color: #f6931f;
+  }
+
+.container {
+    height: 90%;
+    width: 100%;
+}
+
+#console {
+    height: 92%;
+    width: 35%;
+    color:#0D2D6C;
+    padding: 5px;
+    background-color: #9ECF7C;
+    position: absolute;
+    right:0;
+    overflow: auto;
+}
+
+#map {
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    background-color: #ffffff;
+    left:0;
+}
+  
+ .header {
+  overflow: hidden;
+  background-color: #3c444d;
+  height: 10%;
+}
+
+.header_txt {
+    color:white;
+    font-size:30px;
+}
+
+/* Create two equal columns that floats next to each other */
+#title_span {
+    position: fixed;
+    left: 2vw;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+
+#logo_span{
+    float: right;
+    right: 1vw;
+    padding: 10px;
+    display: block;
+    margin: auto;
+}
+
+#sid{
+    color:white;
+    font-style: italic;
+}
+
+.plot {
+    height: 10%;
+    margin:auto;
+}
+
+/* css to customize Leaflet default styles  */
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #3c444d;
+    color: #ffffff;
+    font-size: 1vw;
+    font-family: 'Public Sans', sans-serif;;
+}
+
+.legend {
+    line-height: 18px;
+    color: #0D2D6C;
+    font-family: 'Public Sans', sans-serif;;
+    font-size: 0.9vw;
+    padding: 1% 10%;
+    background: #9ECF7C;
+    opacity: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 20vw;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 1;
+}
+
+.legend p {
+    line-height: 20px;
+    margin: 0;
+}
+
+.legend .circle {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    background-color: #FDB515;
+    border: 3px solid #0D2D6C;
+}
+
+.legend .title{
+    font-weight: bold;
+    font-family: 'Public Sans', sans-serif;;
+}
+

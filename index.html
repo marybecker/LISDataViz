@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>LIS Data Viz</title>
+        <link rel="icon" type="image/x-icon" href="images/monitoring_assessment.png">
+        <!-- Load leaflet -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+        <!-- Load fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Roboto&display=swap" rel="stylesheet"> 
+        <!-- Load css -->
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+         <!-- Load vega -->
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <!-- Load jQuery -->
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+       <!-- Load bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <span id="title_span" class="header_txt">
+                <a href="https://portal.ct.gov/DEEP/Water/LIS-Monitoring/LIS-Water-Quality-and-Hypoxia-Monitoring-Program-Overview" target="_blank">
+                    <img src="images/monitoring_assessment_inverse.png" 
+                    style="width: 8vh; float: left;">
+                </a>
+                Long Island Sound (LIS) Water Quality Data
+            </span>
+            <span class="logo_span">
+                <a href="https://portal.ct.gov/DEEP/" target="_blank">
+                    <img src="https://portal.ct.gov/-/media/DEEP/about/DEEP-Circle-Logo.png" 
+                    style="width: 8vh; float: right;">
+                </a>
+            </span>
+        </div>
+        <div class="container">
+            <span id="map"></span>
+            <span id="console">
+                <h3>Surface Water Quality Measurements</h3>
+                <h5 id="sid">Select a site on the map to plot the monitoring station data</h5>
+                <div class="plot" id="testPlt"></div>
+                <div class="plot" id="testPlt2"></div>
+                <div class="plot" id="testPlt3"></div>
+                <div class="plot" id="testPlt4"></div>
+            </span>
+         </div>
+
+      <script src="main.js"></script>
+      <!-- loads our main.js file-->
+    </body>
+</html>
+
+
