@@ -118,6 +118,7 @@ sdir = 'reports/' + site + '_Salinity.json'
 // addDataPlt('CT_DEP01_WQX-17265','Dissolved oxygen (DO)','#testPlt3')
 // addDataPlt('CT_DEP01_WQX-17265','Salinity','#testPlt4')
 
+
 function addDataPlt(site,parameter,plt){
     sdir = 'reports/' + site + '_' + parameter + '.json'
     unit = getUnits(parameter)
@@ -131,7 +132,7 @@ function addDataPlt(site,parameter,plt){
             "width": 450,
             "height": 200,
             "padding": 5,
-            "autosize": "fit",
+            "autosize": { "type": "none", "resize": true },
             "title": {
               "text": parameter + ' ' + unit,
               "frame": "group",
@@ -153,7 +154,17 @@ function addDataPlt(site,parameter,plt){
                   {"events": "rect:mouseover", "update": "datum"},
                   {"events": "rect:mouseout", "update": "{}"}
                 ]
-              }
+              },
+              {
+                "name": "container_size",
+                "init": "containerSize()",
+                "on": [{ "update": "containerSize()", "events": "window:resize" }]
+              },
+              { "name": "container_height", "update": "container_size[1]" },
+              { "name": "container_width", "update": "container_size[0]" },
+              { "name": "padding", "update": "container_width * 0.125" },
+              { "name": "width", "update": "(container_width - 2*padding)*0.90" },
+              { "name": "height", "update": "(container_height - 2*padding)*0.90" }
             ],
             "scales": [
               {
@@ -210,6 +221,11 @@ function addDataPlt(site,parameter,plt){
                 }
               }
             ]
+          },
+          {
+            renderer: 'svg',
+            logLevel: vega.Info,
+            actions: false
           }
       );
 
